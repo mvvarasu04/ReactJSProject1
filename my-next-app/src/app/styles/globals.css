@@ -1,0 +1,277 @@
+
+body
+{
+    background: repeating-radial-gradient(rgb(152, 12, 218),
+    rgb(179, 14, 77));
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    
+}
+
+.topnav
+{
+    background: linear-gradient(135deg, rgb(204, 12, 70),rgb(13, 211, 96));
+}
+.topnav a,li
+{
+    display: inline-flex;
+    padding: 5px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+.topnav a:hover
+{
+    color: rgb(48, 1, 221);
+    background: linear-gradient(180deg,white,gray);
+    border-radius:6px;
+}
+
+h1
+{
+    color:#ffffff;
+}
+.container1
+{
+    display: grid;
+    background: linear-gradient(140deg,rgb(14, 192, 216),rgb(43, 236, 17));
+
+    
+}
+.container1 img
+{
+    width: 300px;
+    border-radius: 50%;
+}
+.container2
+{
+    background:linear-gradient(140deg,rgb(182, 182, 36),rgb(224, 39, 39));  
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    
+}
+.container2 h1
+{
+    display: block;
+}
+.container3
+{
+    background: linear-gradient( 135deg, hotpink,rgb(9, 175, 9));
+}
+.container3 img
+{
+    width: 400px;
+    height: 200px;
+    border-radius: 50%;
+
+    
+}
+
+.imagegrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+}
+.container4
+{
+    background: linear-gradient(100deg, lime,blue);
+}
+.container4 form
+{
+    width: 300px;
+    height: 400px;
+    background:radial-gradient(Purple,rgb(54, 2, 122));
+    margin: auto;
+    padding:5px;
+    border: 2px ;
+    color: #ffffff;
+    border-radius: 20px;
+    justify-content: center;
+
+}
+.container4 input
+{
+    display: block;
+    margin: 10px;
+    margin-left: 30px;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: 2px;
+    border-radius: 6px;
+    color: white;
+    
+}
+.container4 input:hover
+{
+    background:linear-gradient(rgb(12, 134, 216),rgb(99, 3, 143)) ;
+}
+.container4 h2
+{
+    width: 100%;
+    
+    text-align: center;
+}
+.container4 button
+{
+    width: 80%;
+    border-radius: 8px;
+    background: linear-gradient(140deg,rgb(0, 128, 38),rgb(255, 196, 0));
+}
+.container4 button:hover
+{
+    background:linear-gradient(rgb(221, 216, 216)) ;
+    justify-self: center;
+    width: 80%;
+    box-shadow: 0 0 .25em .5em pink;
+    color:rgb(211, 8, 76);
+    border-radius: 8px;
+    border: 3px solid pink;
+}
+.anime img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    animation-name: circle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes circle
+{
+    0%{ top: 0px; left: 300px;}
+    25%{top: 0px; left: 800px;}
+    50%{top: 550px;left:800px}
+    75%{top: 550px;left:300px}
+    100%{top: 0px; left: 300px;}
+}
+.container5
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+    background: linear-gradient(140deg,white,grey);
+}
+.box1
+{
+    width:300px;
+    background-color: cornflowerblue;
+}
+.box2
+{
+    width:300px;
+    background-color: cornflowerblue;
+}
+.box3
+{
+    width:300px;
+    background-color: cornflowerblue;
+}
+.box4
+{
+    width:300px;
+    background-color: cornflowerblue;
+}
+.box5
+{
+    width:300px;
+    background-color: cornflowerblue;
+}
+.box6
+{
+    width:300px;
+    background-color: cornflowerblue;
+}
+.box7
+{
+    
+    background-color: rgb(128, 230, 97);
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* 📱 Phones: up to 480px */
+@media only screen and (max-width: 480px) {
+  .container1 img,
+  .container3 img,
+  .anime img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container2 {
+    grid-template-columns: 1fr;
+  }
+
+  .imagegrid {
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+  }
+
+  .container4 form {
+    width: 90%;
+    height: auto;
+  }
+
+  .container5 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .topnav p {
+    left: 20px;
+  }
+}
+
+/* 📱 Tablets: 481px to 960px */
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  .container2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .imagegrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container4 form {
+    width: 80%;
+  }
+
+  .container5 {
+    gap: 30px;
+  }
+
+  .topnav p {
+    left: 100px;
+  }
+}
+
+/* 💻 Laptops: 961px and up (if needed for tweaking) */
+@media only screen and (min-width: 961px) and (max-width: 1440px) {
+  /* Adjust widths or layouts if needed */
+  .container2 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container5 {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .container4 form {
+    width: 300px;
+  }
+
+  .topnav p {
+    left: 400px;
+  }
+}
